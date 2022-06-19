@@ -41,3 +41,9 @@ export const ApparelCarbonFootprintPerLbs = {
   wool: 24.8,
   leather: 46.9,
 };
+
+export const CostPerTonneCO2Capture = 94; // USD Source: https://www.iea.org/reports/direct-air-capture
+
+export const LbsInTonne = 2204.6226218488;
+
+export const CostPerLbsCO2Capture = CostPerTonneCO2Capture / LbsInTonne;

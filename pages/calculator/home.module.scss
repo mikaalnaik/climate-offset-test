@@ -1,12 +1,13 @@
 
 
 .component {
-  // background-color: blue;
-  width: 40%;
-  margin: auto;
-  padding-top: 4rem;
+  min-height: 80vh;
+  width: 60%;
+  margin: 4rem auto;
   display: flex;
   justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
 }
 
 
@@ -15,3 +16,4 @@
   display: flex;
   justify-content: center;
 }
+
