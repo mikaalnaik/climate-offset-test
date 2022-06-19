@@ -15,17 +15,15 @@ export default function Index() {
         <div className={styles['hero-content']}>
           <div className='w-full z-3 md:w-8/12 lg:w-6/12 xl:w-6/12 px-4 '>
             <div className='pt-32 sm:pt-0'>
-              <h2 className='font-semibold text-4xl -600'>
+              <h2 className='font-semibold text-6xl'>
                 We make climate action actionable.
               </h2>
-              <p className='mt-4 text-lg leading-relaxed -500'>
+              <p className='mt-4 text-lg leading-relaxed'>
                 Transparent and economical offsets at any scale. Integrating
                 with your favourite platform and APIs devs love, being climate
                 conscious has never been easier.
               </p>
-              <p className='mt-4 text-lg leading-relaxed -500'>
-                $0 merchant fees.
-              </p>
+              <p className='mt-4 text-xlg leading-relaxed'>$0 merchant fees.</p>
               <div className='mt-12'>
                 <a
                   href='https://www.creative-tim.com/learning-lab/tailwind/nextjs/overview/notus?ref=nnjs-index'
@@ -110,11 +108,11 @@ export default function Index() {
                         <i className='fas fa-sitemap'></i>
                       </div>
                       <h6 className='text-xl mb-1 font-semibold'>
-                        CSS Components
+                        Direct Air Capture
                       </h6>
                       <p className='mb-4 text-blueGray-500'>
-                        Notus NextJS comes with a huge number of Fully Coded CSS
-                        components.
+                        Our offsets directly remove CO2 from the atmosphere so
+                        your products are net-zero.
                       </p>
                     </div>
                   </div>
@@ -124,11 +122,12 @@ export default function Index() {
                         <i className='fas fa-drafting-compass'></i>
                       </div>
                       <h6 className='text-xl mb-1 font-semibold'>
-                        Your favourite platforms
+                        Carbon Footprinting
                       </h6>
                       <p className='mb-4 text-blueGray-500'>
-                        We also feature many dynamic components for React,
-                        NextJS, Vue and Angular.
+                        Get granular analysis of your products CO2 footprint
+                        from our carbon calculator. Use our web app, or our API
+                        to footprint your entire catalog.
                       </p>
                     </div>
                   </div>
@@ -139,24 +138,12 @@ export default function Index() {
                       <div className='text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white'>
                         <i className='fas fa-newspaper'></i>
                       </div>
-                      <h6 className='text-xl mb-1 font-semibold'>Pages</h6>
-                      <p className='mb-4 text-blueGray-500'>
-                        This extension also comes with 3 sample pages. They are
-                        fully coded so you can start working instantly.
-                      </p>
-                    </div>
-                  </div>
-                  <div className='relative flex flex-col min-w-0'>
-                    <div className='px-4 py-5 flex-auto'>
-                      <div className='text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white'>
-                        <i className='fas fa-file-alt'></i>
-                      </div>
                       <h6 className='text-xl mb-1 font-semibold'>
-                        Documentation
+                        Put the 'eco' in economical
                       </h6>
                       <p className='mb-4 text-blueGray-500'>
-                        Built by developers for developers. You will love how
-                        easy is to to work with Notus NextJS.
+                        We purchase offsets in bulk which means removing the CO2
+                        is ~1% of cart totals.
                       </p>
                     </div>
                   </div>
@@ -268,33 +255,14 @@ export default function Index() {
                       </p>
                     </div>
                   </a>
-                  <a
-                    href='https://www.creative-tim.com/learning-lab/tailwind/angular/alerts/notus?ref=vtw-index'
-                    target='_blank'
-                  >
-                    <div className='bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8'>
-                      <img
-                        alt='...'
-                        className='shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white'
-                        src='https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/angular.jpg'
-                      />
-                      <p className='text-lg text-white mt-4 font-semibold'>
-                        Angular
-                      </p>
-                    </div>
-                  </a>
+
                   <a
                     href='https://www.creative-tim.com/learning-lab/tailwind/vue/alerts/notus?ref=vtw-index'
                     target='_blank'
                   >
                     <div className='bg-emerald-500 shadow-lg rounded-lg text-center p-8 mt-8'>
-                      <img
-                        alt='...'
-                        className='shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white'
-                        src='https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue.jpg'
-                      />
                       <p className='text-lg text-white mt-4 font-semibold'>
-                        Vue.js
+                        + More Coming Soon
                       </p>
                     </div>
                   </a>
@@ -315,40 +283,6 @@ export default function Index() {
                 neutral.
               </p>
               <p className='text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600'></p>
-              <div className='block pb-6'>
-                <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2'>
-                  Alerts
-                </span>
-                <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2'>
-                  Dropdowns
-                </span>
-                <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2'>
-                  Menus
-                </span>
-                <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2'>
-                  Modals
-                </span>
-                <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2'>
-                  Navbars
-                </span>
-                <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2'>
-                  Popovers
-                </span>
-                <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2'>
-                  Tabs
-                </span>
-                <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2'>
-                  Tooltips
-                </span>
-              </div>
-              <a
-                href='https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=nnjs-index'
-                target='_blank'
-                className='font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150'
-              >
-                View all{' '}
-                <i className='fa fa-angle-double-right ml-1 leading-relaxed'></i>
-              </a>
             </div>
           </div>
         </div>
@@ -360,14 +294,10 @@ export default function Index() {
                 <div className='text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white'>
                   <i className='fas fa-file-alt text-xl'></i>
                 </div>
-                <h3 className='text-3xl font-semibold'>
-                  Complex Documentation
-                </h3>
+                <h3 className='text-3xl font-semibold'>Dev friendly APIs</h3>
                 <p className='mt-4 text-lg leading-relaxed text-blueGray-500'>
-                  This extension comes a lot of fully coded examples that help
-                  you get started faster. You can adjust the colors and also the
-                  programming language. You can change the text and images and
-                  you're good to go.
+                  Audit your entire catalog and run your business carbon neutral
+                  easier than ever before.
                 </p>
                 <ul className='list-none mt-6'>
                   <li className='py-2'>
@@ -393,21 +323,7 @@ export default function Index() {
                       </div>
                       <div>
                         <h4 className='text-blueGray-500'>
-                          Carefully crafted code for Components
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li className='py-2'>
-                    <div className='flex items-center'>
-                      <div>
-                        <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3'>
-                          <i className='far fa-paper-plane'></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 className='text-blueGray-500'>
-                          Dynamic Javascript Components
+                          Beautiful documentation
                         </h4>
                       </div>
                     </div>

@@ -3,12 +3,14 @@
   position: absolute;
   left: 20%;
   color: white;
+  z-index: 2;
   // background-color: blue;
 }
 
 .hero-image {
   align-items: center;
   margin: 0 auto;
+  // filter: blur(1px);
 }
 
 .hero {
