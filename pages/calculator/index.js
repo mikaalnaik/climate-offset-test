@@ -13,6 +13,8 @@ import {
   ProductSubCategories,
 } from 'data/product-categories';
 import CalculatorProductSubCategorySection from 'components/calculator/product-subcategories';
+import TravelCalculator from 'components/calculator/travel';
+import ApparelCalculator from 'components/calculator/apparel';
 
 /*
   This example requires Tailwind CSS v2.0+ 
@@ -31,7 +33,10 @@ import CalculatorProductSubCategorySection from 'components/calculator/product-s
   ```
 */
 export default function Example() {
+  const [totalOffset, setTotalOffset] = useState(0);
   const [category, setCategory] = useState('apparel');
+  const [weightDistance, setWeightDistance] = useState(0);
+  const [subCategory, setSubCategory] = useState('t-shirt');
   const [materials, setMaterials] = useState([
     { type: 'cotton', percentage: 0 },
   ]);
@@ -44,8 +49,19 @@ export default function Example() {
     setMaterials([...materials, { type: 'cotton', percentage: 0 }]);
   };
 
+  const howdy = () => {};
+
+  const changeWeightDistance = (e) => {
+    setWeightDistance(e.target.value);
+  };
+
+  const changeProductSubCategory = (e) => {
+    console.log('HOWDY ', e.target.value);
+    setSubCategory(e.target.value);
+  };
+
   return (
-    <section className={styles.component}>
+    <section className={styles.component} onChange={howdy}>
       <div className='mt-10 sm:mt-0'>
         <div className='md:grid md:grid-cols-3 md:gap-6'>
           <div className='md:col-span-1 mb-4'>
@@ -82,9 +98,16 @@ export default function Example() {
                         })}
                       </select>
                     </div>
-                    {ProductSubCategories[category] && (
+                    {category === 'apparel' && (
+                      <ApparelCalculator setOffset={setTotalOffset} />
+                    )}
+                    {category === 'travel' && (
+                      <TravelCalculator setOffset={setTotalOffset} />
+                    )}
+                    {/* {ProductSubCategories[category] && (
                       <CalculatorProductSubCategorySection
                         category={category}
+                        onChange={changeProductSubCategory}
                       />
                     )}
 
@@ -99,6 +122,7 @@ export default function Example() {
                         type='number'
                         name='weight'
                         id='weight'
+                        onChange={changeWeightDistance}
                         placeholder={
                           category === 'apparel'
                             ? 'Weight in lbs'
@@ -112,7 +136,9 @@ export default function Example() {
                     {category === 'apparel' && (
                       <>
                         {materials.map((material, index) => {
-                          return <CalculatorMaterialSection />;
+                          return (
+                            <CalculatorMaterialSection materials={materials} />
+                          );
                         })}
                         <PlusSmIcon
                           className='h-8 w-8 shadow-md rounded-full max-w-full mx-auto bg-white'
@@ -120,14 +146,14 @@ export default function Example() {
                           aria-hidden='true'
                         />
                       </>
-                    )}
+                    )} */}
                   </div>
                 </div>
-                <div className='px-4 py-3 bg-gray-50 text-right sm:px-6'>
+                {/* <div className='px-4 py-3 bg-gray-50 text-right sm:px-6'>
                   <button className='inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>
                     Save
                   </button>
-                </div>
+                </div> */}
               </div>
             </form>
           </div>
@@ -135,6 +161,7 @@ export default function Example() {
       </div>
       <div className={styles.estimate}>
         <h1>Carbon Footprint</h1>
+        <h2>{totalOffset}totalOffset</h2>
       </div>
     </section>
   );

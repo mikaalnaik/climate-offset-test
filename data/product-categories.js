@@ -31,3 +31,13 @@ export const TravelCarbonFootprintPerKm = {
   train: 0.14,
   motorcycle: 0.72,
 };
+
+export const ApparelCarbonFootprintPerLbs = {
+  cotton: 14.5,
+  polyester: 14.2,
+  linen: 11.7,
+  viscose: 14,
+  nylon: 12.7,
+  wool: 24.8,
+  leather: 46.9,
+};
