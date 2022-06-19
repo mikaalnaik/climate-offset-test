@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
 import Link from 'next/link';
-
+import styles from '../styles/home-page.module.scss';
 import IndexNavbar from 'components/Navbars/IndexNavbar.js';
 import Footer from 'components/Footers/Footer.js';
 
@@ -9,19 +9,21 @@ export default function Index() {
   return (
     <>
       <IndexNavbar fixed />
-      <section className='header relative pt-16 items-center flex h-screen max-h-860-px'>
-        <div className='container mx-auto items-center flex flex-wrap '>
-          <div className='w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4 '>
+      <section
+        className={` ${styles.hero} header relative pt-16 items-center mb-72 pb-72 flex h-screen max-h-860-px`}
+      >
+        <div className={styles['hero-content']}>
+          <div className='w-full z-3 md:w-8/12 lg:w-6/12 xl:w-6/12 px-4 '>
             <div className='pt-32 sm:pt-0'>
-              <h2 className='font-semibold text-4xl text-blueGray-600'>
+              <h2 className='font-semibold text-4xl -600'>
                 We make climate action actionable.
               </h2>
-              <p className='mt-4 text-lg leading-relaxed text-blueGray-500'>
+              <p className='mt-4 text-lg leading-relaxed -500'>
                 Transparent and economical offsets at any scale. Integrating
                 with your favourite platform and APIs devs love, being climate
                 conscious has never been easier.
               </p>
-              <p className='mt-4 text-lg leading-relaxed text-blueGray-500'>
+              <p className='mt-4 text-lg leading-relaxed -500'>
                 $0 merchant fees.
               </p>
               <div className='mt-12'>
@@ -36,16 +38,18 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <img
-          className='absolute object-contain  b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px'
-          src='https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
-          alt='...'
-        />
+        <section className={styles['hero-image']}>
+          <img
+            className=''
+            src='https://images.unsplash.com/photo-1495312040802-a929cd14a6ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80'
+            alt='...'
+          />
+        </section>
       </section>
 
-      <section className='mt-48 md:mt-40 pb-40 relative bg-blueGray-100 '>
+      <section className='mt-72 pt-40 pb-40 relative bg-blueGray-100 '>
         <div
-          className='-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20'
+          className=' top-0 bottom-auto left-0 right-0 w-full absolute h-20'
           style={{ transform: 'translateZ(0)' }}
         >
           <svg
@@ -63,7 +67,7 @@ export default function Index() {
             ></polygon>
           </svg>
         </div>
-        <div className='container mx-auto'>
+        <div className='container mx-auto mt-72'>
           <div className='flex flex-wrap items-center'>
             <div className='w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32'>
               <div className='relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-blueGray-700'>
@@ -425,72 +429,6 @@ export default function Index() {
             </div>
           </div>
         </div>
-
-        <div className='justify-center text-center flex flex-wrap mt-24'>
-          <div className='w-full md:w-6/12 px-12 md:px-4'>
-            <h2 className='font-semibold text-4xl'>Beautiful Example Pages</h2>
-            <p className='text-lg leading-relaxed mt-4 mb-4 text-blueGray-500'>
-              Notus NextJS is a completly new product built using our past
-              experience in web templates. Take the examples we made for you and
-              start playing with them.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className='block relative z-1 bg-blueGray-600'>
-        <div className='container mx-auto'>
-          <div className='justify-center flex flex-wrap'>
-            <div className='w-full lg:w-12/12 px-4  -mt-24'>
-              <div className='flex flex-wrap'>
-                <div className='w-full lg:w-4/12 px-4'>
-                  <h5 className='text-xl font-semibold pb-4 text-center'>
-                    Login Page
-                  </h5>
-                  <Link href='/auth/login'>
-                    <div className='hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150'>
-                      <img
-                        alt='...'
-                        className='align-middle border-none max-w-full h-auto rounded-lg'
-                        src='/img/login.jpg'
-                      />
-                    </div>
-                  </Link>
-                </div>
-
-                <div className='w-full lg:w-4/12 px-4'>
-                  <h5 className='text-xl font-semibold pb-4 text-center'>
-                    Profile Page
-                  </h5>
-                  <Link href='/profile'>
-                    <div className='hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150'>
-                      <img
-                        alt='...'
-                        className='align-middle border-none max-w-full h-auto rounded-lg'
-                        src='/img/profile.jpg'
-                      />
-                    </div>
-                  </Link>
-                </div>
-
-                <div className='w-full lg:w-4/12 px-4'>
-                  <h5 className='text-xl font-semibold pb-4 text-center'>
-                    Landing Page
-                  </h5>
-                  <Link href='/landing'>
-                    <div className='hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150'>
-                      <img
-                        alt='...'
-                        className='align-middle border-none max-w-full h-auto rounded-lg'
-                        src='/img/landing.jpg'
-                      />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       <section className='py-20 bg-blueGray-600 overflow-hidden'>
@@ -501,36 +439,31 @@ export default function Index() {
                 <i className='fas fa-code-branch text-xl'></i>
               </div>
               <h3 className='text-3xl mb-2 font-semibold leading-normal text-white'>
-                Open Source
+                Transparent as CO2
               </h3>
               <p className='text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-400'>
-                Since{' '}
-                <a
-                  href='https://tailwindcss.com/?ref=creative'
-                  className='text-blueGray-300'
-                  target='_blank'
-                >
-                  Tailwind CSS
-                </a>{' '}
-                is an open source project we wanted to continue this movement
-                too. You can give this version a try to feel the design and also
-                test the quality of the code!
+                We're on a mission to revert the effects of climate change. The
+                offsets we supply are based on state-of-the-art technology that
+                directly removes CO2 from the atmosphere. How we calculate
+                footprints, where and how the offset takes place is transparent
+                to you and your customer, because we know you care as much as we
+                do about the impact we have.
               </p>
               <p className='text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-400'>
-                Get it free on Github and please help us spread the news with a
-                Star!
+                Chat with our team about what Revert can do for you, your
+                customers, and the world.
               </p>
               <a
                 href='https://github.com/creativetimofficial/notus-nextjs?ref=nnjs-index'
                 target='_blank'
                 className='github-star mt-4 inline-block text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg'
               >
-                Github Star
+                Get in touch
               </a>
             </div>
 
             <div className='w-full md:w-4/12 px-4 mr-auto ml-auto mt-32 relative'>
-              <i className='fab fa-github text-blueGray-700 absolute text-55 -top-150-px -right-100 left-auto opacity-80'></i>
+              <i className='fab fa-planet-moon text-blueGray-700 absolute text-55 -top-150-px -right-100 left-auto opacity-80'></i>
             </div>
           </div>
         </div>
@@ -565,29 +498,19 @@ export default function Index() {
                   😍
                 </span>
               </p>
-              <h3 className='font-semibold text-3xl'>
-                Do you love this Starter Kit?
-              </h3>
+              <h3 className='font-semibold text-3xl'>Still have questions?</h3>
               <p className='text-blueGray-500 text-lg leading-relaxed mt-4 mb-4'>
-                Cause if you do, it can be yours now. Hit the buttons below to
-                navigate to get the Free version for your next project. Build a
-                new web app or give an old project a new look!
+                We'd love to hear from you. Send us an email or reach out
+                directly to us here.
               </p>
               <div className='sm:block flex flex-col mt-10'>
                 <a
-                  href='https://www.creative-tim.com/learning-lab/tailwind/nextjs/overview/notus?ref=nnjs-index'
-                  target='_blank'
-                  className='get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-blueGray-400 active:bg-blueGray-500 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150'
-                >
-                  Get started
-                </a>
-                <a
                   href='https://github.com/creativetimofficial/notus-nextjs?ref=nnjs-index'
                   target='_blank'
-                  className='github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg'
+                  className='sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg'
                 >
-                  <i className='fab fa-github text-lg mr-1'></i>
-                  <span>Help With a Star</span>
+                  <i className='fab text-lg mr-1'></i>
+                  <span>Reach out</span>
                 </a>
               </div>
               <div className='text-center mt-16'></div>
